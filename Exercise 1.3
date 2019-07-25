@@ -1,0 +1,6 @@
+(define (square x)(* x x))
+(define (square-sum a b)(+ (square a) (square b)))
+(define (square-sum-larger a b c)
+  (if (> a b)
+      (if (> b c) (square-sum a b) (square-sum a c))
+      (if (> a c) (square-sum a b) (square-sum b c))))
