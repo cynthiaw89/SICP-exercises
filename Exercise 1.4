@@ -1,0 +1,12 @@
+Exercise 1.4. Observe that our model of evaluation allows for combinations whose operators are compound expressions. 
+Use this observation to describe the behavior of the following procedure:
+
+
+(define (mystery a b)
+  ((if (> b 0) + -) a b))
+Describe the behavior of the procedure by selecting which descriptions are equivalent. 
+If you think that the procedure definition is invalid, choose the reasons why.
+
+X (if (> b 0) (+ a b) (- a b)) [This is because the operators + and - are the consequent and alternative (respectively) which will act upon a b.]
+(+ a (abs b)) [This is another way to state the above expression (Thanks Google)]
+(+ a (if (> b 0) b (- b))) [This is another way to express]
